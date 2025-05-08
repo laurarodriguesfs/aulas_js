@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
+<!-- As funções são blocos de código reutilizśaveis que executam uma tarefa específica.
+Ajudam a estruturar e modularizar o código.-->
 </head>
 <body>
-   <main id="app"></main>
-   <label for="numero">Número</label>
-   <input type="text" id="numero">
+   <main id="app">
+        <div id="resultado">
+        </div>
+        <form id="form-calc">
+            <label for="numero1">Número 1</label>
+            <input type="number" id="numero1">
+            <label for="numero2">Número 2</label>
+            <input type="number" id="numero2">
+            <button id="multiplicar">Multiplicar</button>
+            <button id="subtrair">Subtrair</button>
+            <button id="somar">Somar</button>
+            <input type="text" id="nome" placeholder="Digite o nome">
+        </form>
+        <button id="limpar">Limpar</button>
+    </main>
+   
     <!--<script src="js/loops_for.js" defer></script> -->
-    <script src="js/while.js" defer></script>
+    <script src="js/funcoes.js" defer></script>
 </body>
 </html>
