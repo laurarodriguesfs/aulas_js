@@ -1,4 +1,5 @@
 const navbar = document.querySelector("#navbar")
+
 navbar.innerHTML=`
  <nav>
     <ul>
@@ -8,7 +9,6 @@ navbar.innerHTML=`
     </ul>
 </nav>`
 
-if(location.pathname === "index.html"){
 
 const mainpainel = document.querySelector("#exibir")
 const lista = document.createElement("ul")
@@ -19,15 +19,17 @@ const lista_de_frutas = [
     {"nome": "maçã","preço": 20}
 ]
 
-lista_de_frutas.forEach((item)=>{
-    const listagem = document.createElement("li")
+lista_de_frutas.forEach((item) => {
+    const listagem = document.createElement("li");
+    listagem.classList.add("produto"); // Adiciona a classe
+
     listagem.innerHTML = `
-    Nome do produto: ${item.nome}
-    Preço do produto: ${item.preço}
-    `
-    lista.appendChild(listagem)
-})
+        Nome do produto: ${item.nome}<br>
+        Preço do produto: ${item.preço}
+    `;
+
+    lista.appendChild(listagem);
+});
 
 mainpainel.appendChild(lista)
 //mainpainel.innerHTML=""
-}
